@@ -66,7 +66,7 @@
                     <ul class="nav nav-second-level">
                         <li><a href="index.html">订单列表</a></li>
                         <li><a href="dashboard_2.html">退货管理</a></li>
-                        <li><a href="dashboard_3.html">售后原因</a></li>
+                        <li><a href="dashboard_3.html">售后管理</a></li>
                         <li><a href="dashboard_4_1.html">取消订单</a></li>
                     </ul>
                 </li>
@@ -170,7 +170,7 @@
                     <a href="#"><i class="fa fa-chart-line"></i> <span class="nav-label">财务</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="search_results.html">团长结算</a></li>
-                        <li><a href="lockscreen.html">团长体现</a></li>
+                        <li><a href="lockscreen.html">团长提现</a></li>
                         <li><a href="invoice.html">会员结算</a></li>
                         <li><a href="login.html">会员提现</a></li>
                         <li><a href="login_two_columns.html">采购结算</a></li>
@@ -180,14 +180,14 @@
                     <a href="#"><i class="fa fa-chart-bar"></i> <span class="nav-label">报表</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="search_results.html">团长结算</a></li>
-                        <li><a href="lockscreen.html">团长体现</a></li>
+                        <li><a href="lockscreen.html">团长提现</a></li>
                         <li><a href="invoice.html">会员结算</a></li>
                         <li><a href="login.html">会员提现</a></li>
                         <li><a href="login_two_columns.html">采购结算</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">参数配置</span></a>
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">参数配置</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="toastr_notifications.html">企业信息</a></li>
                         <li><a href="nestable_list.html">系统参数</a></li>
