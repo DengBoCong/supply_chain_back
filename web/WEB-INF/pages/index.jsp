@@ -31,7 +31,7 @@
                 <li class="nav-header">
                     <div class="dropdown profile-element">
                         <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <img id="logoImage" alt="image" class="img-circle" src="" width="170px" height="100px" />
                         </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear">
@@ -39,7 +39,7 @@
                             </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="profile.html">详细资料</a></li>
+                            <li><a href="ConfigurationEnterpriseInfo/Index">企业信息</a></li>
                             <li><a href="contacts.html">下属账户</a></li>
                             <li class="divider"></li>
                             <li><a href="login.html">退出系统</a></li>
@@ -56,90 +56,90 @@
                     <a href="#"><i class="fa fa-box-open"></i> <span class="nav-label">商品</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="CommocityRecord/Index">商品档案</a></li>
-                        <li><a href="dashboard_4_1.html">商品分类</a></li>
-                        <li><a href="dashboard_2.html">辅助资料</a></li>
-                        <li><a href="dashboard_3.html">商品图片</a></li>
+                        <li><a href="CommodityClassify/Index">商品分类</a></li>
+                        <li><a href="CommodityData/Index">辅助资料</a></li>
+                        <li><a href="CommodityImage/Index">商品图片</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="layouts.html"><i class="fa fa-file-alt"></i> <span class="nav-label">订单</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="index.html">订单列表</a></li>
-                        <li><a href="dashboard_2.html">退货管理</a></li>
-                        <li><a href="dashboard_3.html">售后管理</a></li>
-                        <li><a href="dashboard_4_1.html">取消订单</a></li>
+                        <li><a href="OrderTabulate/Index">订单列表</a></li>
+                        <li><a href="OrderReturnManage/Index">退货管理</a></li>
+                        <li><a href="OrderAfterSalesManage/Index">售后管理</a></li>
+                        <li><a href="OrderCancellation/Index">取消订单</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-archive"></i> <span class="nav-label">采购</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="graph_flot.html">采购单</a></li>
-                        <li><a href="graph_morris.html">采购退回</a></li>
-                        <li><a href="graph_rickshaw.html">采购历史</a></li>
-                        <li><a href="graph_chartjs.html">供应商</a></li>
-                        <li><a href="graph_chartist.html">采购员</a></li>
+                        <li><a href="PurchaseOrder/Index">采购单</a></li>
+                        <li><a href="PurchaseReturn/Index">采购退回</a></li>
+                        <li><a href="PurchaseHistory/Index">采购历史</a></li>
+                        <li><a href="PurchaseAgent/Index">供应商</a></li>
+                        <li><a href="PurchaseSupplier/Index">采购员</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="mailbox.html"><i class="fa fa-archway"></i> <span class="nav-label">库房 </span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="mailbox.html">分拣打印</a></li>
-                        <li><a href="mail_detail.html">摘果称重</a></li>
-                        <li><a href="mail_compose.html">分拣员</a></li>
-                        <li><a href="email_template.html">分拣历史</a></li>
-                        <li><a href="mailbox.html">入库管理</a></li>
-                        <li><a href="mail_detail.html">出库管理</a></li>
-                        <li><a href="mail_compose.html">发货出库</a></li>
-                        <li><a href="email_template.html">库存盘点</a></li>
-                        <li><a href="email_template.html">报损报溢</a></li>
+                        <li><a href="StorehouseSeparatePrint/Index">分拣打印</a></li>
+                        <li><a href="StorehouseWeight/Index">摘果称重</a></li>
+                        <li><a href="StorehouseSorter/Index">分拣员</a></li>
+                        <li><a href="StorehouseSortHistory/Index">分拣历史</a></li>
+                        <li><a href="StorehouseEnterManage/Index">入库管理</a></li>
+                        <li><a href="StorehouseOutManage/Index">出库管理</a></li>
+                        <li><a href="StorehouseDeliverOut/Index">发货出库</a></li>
+                        <li><a href="StorehouseStockTaking/Index">库存盘点</a></li>
+                        <li><a href="StorehouseLossesOverflow/Index">报损报溢</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="metrics.html"><i class="fa fa-car-side"></i> <span class="nav-label">配送</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="form_basic.html">线路</a></li>
-                        <li><a href="form_advanced.html">区域</a></li>
-                        <li><a href="form_wizard.html">配送地图</a></li>
-                        <li><a href="form_file_upload.html">配送方式</a></li>
+                        <li><a href="DistributionRoute/Index">线路</a></li>
+                        <li><a href="DistributionArea/Index">区域</a></li>
+                        <li><a href="DistributionMap/Index">配送地图</a></li>
+                        <li><a href="DistributionWay/Index">配送方式</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="widgets.html"><i class="fa fa-id-badge"></i> <span class="nav-label">客户</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="form_basic.html">客户档案</a></li>
-                        <li><a href="form_advanced.html">客户类型</a></li>
-                        <li><a href="form_wizard.html">集团管理</a></li>
-                        <li><a href="form_file_upload.html">客户看板</a></li>
-                        <li><a href="form_editors.html">下单情况</a></li>
-                        <li><a href="form_markdown.html">订单历史</a></li>
+                        <li><a href="CustomerRecord/Index">客户档案</a></li>
+                        <li><a href="CustomerType/Index">客户类型</a></li>
+                        <li><a href="CustomerGroupManage/Index">集团管理</a></li>
+                        <li><a href="CustomerNoticeboard/Index">客户看板</a></li>
+                        <li><a href="CustomerOrdersPlaced/Index">下单情况</a></li>
+                        <li><a href="CustomerOrderHistory/Index">订单历史</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="widgets.html"><i class="fa fa-address-card"></i> <span class="nav-label">团长</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="form_basic.html">团长类别</a></li>
-                        <li><a href="form_advanced.html">团长等级</a></li>
-                        <li><a href="form_wizard.html">配送单</a></li>
-                        <li><a href="form_file_upload.html">异常配送单</a></li>
-                        <li><a href="form_editors.html">配送汇总</a></li>
-                        <li><a href="form_markdown.html">团长排行</a></li>
-                        <li><a href="form_markdown.html">团长推荐</a></li>
+                        <li><a href="AgencyClassification/Index">团长类别</a></li>
+                        <li><a href="AgencyRank/Index">团长等级</a></li>
+                        <li><a href="AgencyDeliver/Index">配送单</a></li>
+                        <li><a href="AgencyDeliverAbnormal/Index">异常配送单</a></li>
+                        <li><a href="AgencyDeliverDather/Index">配送汇总</a></li>
+                        <li><a href="AgencySiblings/Index">团长排行</a></li>
+                        <li><a href="AgencyRecommend/Index">团长推荐</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">营销</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="form_basic.html">秒杀商品</a></li>
-                        <li><a href="form_advanced.html">限时抢购</a></li>
-                        <li><a href="form_wizard.html">精品团购</a></li>
-                        <li><a href="form_file_upload.html">活动分类</a></li>
-                        <li><a href="form_editors.html">优惠券</a></li>
-                        <li><a href="form_markdown.html">新人券</a></li>
-                        <li><a href="form_file_upload.html">分享券</a></li>
-                        <li><a href="form_editors.html">会员推荐</a></li>
-                        <li><a href="form_markdown.html">大礼包</a></li>
-                        <li><a href="form_editors.html">销售管理</a></li>
-                        <li><a href="form_markdown.html">销售业绩</a></li>
+                        <li><a href="MarketingSecondsKill/Index">秒杀商品</a></li>
+                        <li><a href="MarketingFlashSale/Index">限时抢购</a></li>
+                        <li><a href="MarketingGroupPurchase/Index">精品团购</a></li>
+                        <li><a href="MarketingClassificationActivities/Index">活动分类</a></li>
+                        <li><a href="MarketingCoupon/Index">优惠券</a></li>
+                        <li><a href="MarketingNewTicket/Index">新人券</a></li>
+                        <li><a href="MarketingShareCoupons">分享券</a></li>
+                        <li><a href="MarketingCustomerRecommended">会员推荐</a></li>
+                        <li><a href="MarketingGiftPacks/Index">大礼包</a></li>
+                        <li><a href="MarketingManage/Index">销售管理</a></li>
+                        <li><a href="MarketingExploit/Index">销售业绩</a></li>
                     </ul>
                 </li>
                 <li>
@@ -169,11 +169,11 @@
                 <li>
                     <a href="#"><i class="fa fa-chart-line"></i> <span class="nav-label">财务</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="search_results.html">团长结算</a></li>
-                        <li><a href="lockscreen.html">团长提现</a></li>
-                        <li><a href="invoice.html">会员结算</a></li>
-                        <li><a href="login.html">会员提现</a></li>
-                        <li><a href="login_two_columns.html">采购结算</a></li>
+                        <li><a href="FinacialAgencyDraw/Index">团长结算</a></li>
+                        <li><a href="FinacialAgencySettle/Index">团长提现</a></li>
+                        <li><a href="FinacialCustomerDraw/Index">会员结算</a></li>
+                        <li><a href="FinacialCustomerSettle/Index">会员提现</a></li>
+                        <li><a href="FinacialPurchaseSettle/Index">采购结算</a></li>
                     </ul>
                 </li>
                 <li>
@@ -189,17 +189,16 @@
                 <li>
                     <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">参数配置</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="toastr_notifications.html">企业信息</a></li>
-                        <li><a href="nestable_list.html">系统参数</a></li>
-                        <li><a href="agile_board.html">操作日志</a></li>
-                        <li><a href="timeline_2.html">送货时间</a></li>
-                        <li><a href="diff.html">云片配置</a></li>
-                        <li><a href="i18support.html">微信配置</a></li>
-                        <li><a href="sweetalert.html">打印模板</a></li>
-                        <li><a href="idle_timer.html">打印配置</a></li>
-                        <li><a href="truncate.html">操作员管理</a></li>
-                        <li><a href="spinners.html">角色管理</a></li>
-                        <li><a href="tinycon.html">运营时段配置</a></li>
+                        <li><a href="ConfigurationSystemPara/Index">系统参数</a></li>
+                        <li><a href="ConfigurationOperationLog/Index">操作日志</a></li>
+                        <li><a href="ConfigurationDeliveryTime/Index">送货时间</a></li>
+                        <li><a href="ConfigurationCloudSlice/Index">云片配置</a></li>
+                        <li><a href="ConfigurationWechat/Index">微信配置</a></li>
+                        <li><a href="ConfigurationPrintTemp/Index">打印模板</a></li>
+                        <li><a href="ConfigurationPrintSetting/Index">打印配置</a></li>
+                        <li><a href="ConfigurationOperatorManage/Index">操作员管理</a></li>
+                        <li><a href="ConfigurationRoleManage/Index">角色管理</a></li>
+                        <li><a href="ConfigurationOperatingHours/Index">运营时段配置</a></li>
                     </ul>
                 </li>
                 <li>
@@ -245,61 +244,107 @@
                 </ul>
             </nav>
         </div>
-        <div class="row  border-bottom white-bg dashboard-header">
-            <div class="col-sm-3">
-                <h2>营业数据</h2>
-                <small>每日数据收集时间段从 00.00-24.00</small>
-                <ul class="list-group clear-list m-t">
-                    <li class="list-group-item fist-item">
-                        <span class="pull-right">
-                        1
-                        </span>
-                        <span class="label label-success fa fa-file-alt pull-left"> </span> 今日订单
-                    </li>
-                    <li class="list-group-item">
-                        <span class="pull-right">
-                        0.00
-                        </span>
-                        <span class="label label-info fa fa-archive pull-left"> </span> 采购金额(元)
-                    </li>
-                    <li class="list-group-item">
-                        <span class="pull-right">
-                        253.10
-                        </span>
-                        <span class="label label-primary fa fa-box-open pull-left"> </span> 订单金额(元)
-                    </li>
-                    <li class="list-group-item">
-                        <span class="pull-right">
-                        0
-                        </span>
-                        <span class="label label-default fa fa-id-badge pull-left"> </span> 新增客户
-                    </li>
-                    <li class="list-group-item">
-                        <span class="pull-right">
-                        0
-                        </span>
-                        <span class="label label-primary fa fa-address-card pull-left"> </span> 新增团长
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-9">
-                <div class="flot-chart dashboard-chart">
-                    <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-success pull-right">今日</span>
+                        <h5>新增订单</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" style="text-align: center;">386,200</h1>
+                        <%--<div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
+                        <small>所有订单</small>--%>
+                    </div>
                 </div>
-                <div class="row text-left">
-                    <div class="col-xs-4">
-                        <div class=" m-l-md">
-                            <span class="h4 font-bold m-t block">$ 406,100</span>
-                            <small class="text-muted m-b block">最低金额</small>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-info pull-right">今日</span>
+                        <h5>新增用户</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" style="text-align: center;">80,800</h1>
+                        <%--<div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                        <small>New orders</small>--%>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-primary pull-right">今日</span>
+                        <h5>订单金额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" style="text-align: center;">406,42</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-primary pull-right">今日</span>
+                        <h5>已配送金额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins" style="text-align: center;">206,12</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  border-bottom dashboard-header">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div>
+                            <span class="pull-right text-right">
+                            <small>历史每月平均订单金额: <strong>1,000</strong></small>
+                            <br />
+                            总销售额: 162,862
+                            </span>
+                            <h3 class="font-bold no-margins">
+                                营业数据
+                            </h3>
+                            <small>订单金额(元)</small>
                         </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <span class="h4 font-bold m-t block">$ 150,401</span>
-                        <small class="text-muted m-b block">最高金额</small>
-                    </div>
-                    <div class="col-xs-4">
-                        <span class="h4 font-bold m-t block">$ 16,822</span>
-                        <small class="text-muted m-b block">金额总和</small>
+                        <div class="m-t-sm">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div>
+                                        <canvas id="lineChart" height="114"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="stat-list m-t-lg">
+                                        <li>
+                                            <h2 class="no-margins">2,346</h2>
+                                            <small>本月 总订单金额</small>
+                                            <div class="progress progress-mini">
+                                                <div class="progress-bar" style="width: 48%;"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h2 class="no-margins ">4,422</h2>
+                                            <small>上个月 总订单金额</small>
+                                            <div class="progress progress-mini">
+                                                <div class="progress-bar" style="width: 60%;"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-t-md">
+                            <small class="pull-right">
+                                <i class="fa fa-clock-o"> </i>
+                                数据更新 2019.6.16
+                            </small>
+                            <small>
+                                <strong>数据表说明:</strong> 呈现数据从每月1号开始，至每月月底结束。.
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -405,6 +450,220 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>Custom responsive table </h5>
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-sm-9 m-b-xs">
+                                            <div data-toggle="buttons" class="btn-group">
+                                                <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> Day </label>
+                                                <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> Week </label>
+                                                <label class="btn btn-sm btn-white"> <input type="radio" id="option3" name="options"> Month </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Project </th>
+                                                <th>Name </th>
+                                                <th>Phone </th>
+                                                <th>Company </th>
+                                                <th>Completed </th>
+                                                <th>Task</th>
+                                                <th>Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Project <small>This is example of project</small></td>
+                                                <td>Patrick Smith</td>
+                                                <td>0800 051213</td>
+                                                <td>Inceptos Hymenaeos Ltd</td>
+                                                <td><span class="pie">0.52/1.561</span></td>
+                                                <td>20%</td>
+                                                <td>Jul 14, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Alpha project</td>
+                                                <td>Alice Jackson</td>
+                                                <td>0500 780909</td>
+                                                <td>Nec Euismod In Company</td>
+                                                <td><span class="pie">6,9</span></td>
+                                                <td>40%</td>
+                                                <td>Jul 16, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Betha project</td>
+                                                <td>John Smith</td>
+                                                <td>0800 1111</td>
+                                                <td>Erat Volutpat</td>
+                                                <td><span class="pie">3,1</span></td>
+                                                <td>75%</td>
+                                                <td>Jul 18, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Gamma project</td>
+                                                <td>Anna Jordan</td>
+                                                <td>(016977) 0648</td>
+                                                <td>Tellus Ltd</td>
+                                                <td><span class="pie">4,9</span></td>
+                                                <td>18%</td>
+                                                <td>Jul 22, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Alpha project</td>
+                                                <td>Alice Jackson</td>
+                                                <td>0500 780909</td>
+                                                <td>Nec Euismod In Company</td>
+                                                <td><span class="pie">6,9</span></td>
+                                                <td>40%</td>
+                                                <td>Jul 16, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Project <small>This is example of project</small></td>
+                                                <td>Patrick Smith</td>
+                                                <td>0800 051213</td>
+                                                <td>Inceptos Hymenaeos Ltd</td>
+                                                <td><span class="pie">0.52/1.561</span></td>
+                                                <td>20%</td>
+                                                <td>Jul 14, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Gamma project</td>
+                                                <td>Anna Jordan</td>
+                                                <td>(016977) 0648</td>
+                                                <td>Tellus Ltd</td>
+                                                <td><span class="pie">4,9</span></td>
+                                                <td>18%</td>
+                                                <td>Jul 22, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Project <small>This is example of project</small></td>
+                                                <td>Patrick Smith</td>
+                                                <td>0800 051213</td>
+                                                <td>Inceptos Hymenaeos Ltd</td>
+                                                <td><span class="pie">0.52/1.561</span></td>
+                                                <td>20%</td>
+                                                <td>Jul 14, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Alpha project</td>
+                                                <td>Alice Jackson</td>
+                                                <td>0500 780909</td>
+                                                <td>Nec Euismod In Company</td>
+                                                <td><span class="pie">6,9</span></td>
+                                                <td>40%</td>
+                                                <td>Jul 16, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Betha project</td>
+                                                <td>John Smith</td>
+                                                <td>0800 1111</td>
+                                                <td>Erat Volutpat</td>
+                                                <td><span class="pie">3,1</span></td>
+                                                <td>75%</td>
+                                                <td>Jul 18, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Gamma project</td>
+                                                <td>Anna Jordan</td>
+                                                <td>(016977) 0648</td>
+                                                <td>Tellus Ltd</td>
+                                                <td><span class="pie">4,9</span></td>
+                                                <td>18%</td>
+                                                <td>Jul 22, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Alpha project</td>
+                                                <td>Alice Jackson</td>
+                                                <td>0500 780909</td>
+                                                <td>Nec Euismod In Company</td>
+                                                <td><span class="pie">6,9</span></td>
+                                                <td>40%</td>
+                                                <td>Jul 16, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Project <small>This is example of project</small></td>
+                                                <td>Patrick Smith</td>
+                                                <td>0800 051213</td>
+                                                <td>Inceptos Hymenaeos Ltd</td>
+                                                <td><span class="pie">0.52/1.561</span></td>
+                                                <td>20%</td>
+                                                <td>Jul 14, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Gamma project</td>
+                                                <td>Anna Jordan</td>
+                                                <td>(016977) 0648</td>
+                                                <td>Tellus Ltd</td>
+                                                <td><span class="pie">4,9</span></td>
+                                                <td>18%</td>
+                                                <td>Jul 22, 2013</td>
+                                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer">
                     <div class="pull-right">
@@ -426,45 +685,21 @@
         </div>
         <div class="content">
             <div class="left">
-                <div class="author-name">
-                    服务时段
-                    <small class="chat-date">
-                        00:00 - 24:00
-                    </small>
-                </div>
                 <div class="chat-message">
                     在线系统客服 666-6666666
                 </div>
             </div>
             <div class="left">
-                <div class="author-name">
-                    服务时段
-                    <small class="chat-date">
-                        00:00 - 24:00
-                    </small>
-                </div>
                 <div class="chat-message">
                     物流配送客服 666-6666666
                 </div>
             </div>
             <div class="left">
-                <div class="author-name">
-                    服务时段
-                    <small class="chat-date">
-                        00:00 - 24:00
-                    </small>
-                </div>
                 <div class="chat-message">
                     APP客服 666-6666666
                 </div>
             </div>
             <div class="left">
-                <div class="author-name">
-                    服务时段
-                    <small class="chat-date">
-                        00:00 - 24:00
-                    </small>
-                </div>
                 <div class="chat-message">
                     小程序客服 666-6666666
                 </div>
@@ -853,6 +1088,8 @@ Update everyday
 <script src="js/plugins/iCheck/icheck.min.js"></script>
 <script>
     $(document).ready(function() {
+        $('#logoImage').attr('src', JSON.parse(sessionStorage.getItem("enterpriseInfo")).logoImage);
+
         setTimeout(function() {
             toastr.options = {
                 closeButton: true,
@@ -860,128 +1097,63 @@ Update everyday
                 showMethod: 'slideDown',
                 timeOut: 4000
             };
-            toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+            toastr.success('小陌速派将竭诚为您服务', '欢迎使用 小陌速派');
 
         }, 1300);
 
+        var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
+        var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
 
         var data1 = [
-            [0,4],[1,8],[2,5],[3,10],[4,4],[5,16],[6,5],[7,11],[8,6],[9,11],[10,30],[11,10],[12,13],[13,4],[14,3],[15,3],[16,6]
-        ];
-        var data2 = [
-            [0,1],[1,0],[2,2],[3,0],[4,1],[5,3],[6,1],[7,5],[8,2],[9,3],[10,2],[11,1],[12,0],[13,2],[14,8],[15,0],[16,0]
-        ];
-        $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
-                data1, data2
-            ],
-            {
-                series: {
-                    lines: {
-                        show: false,
-                        fill: true
-                    },
-                    splines: {
-                        show: true,
-                        tension: 0.4,
-                        lineWidth: 1,
-                        fill: 0.4
-                    },
-                    points: {
-                        radius: 0,
-                        show: true
-                    },
-                    shadowSize: 2
-                },
-                grid: {
-                    hoverable: true,
-                    clickable: true,
-                    tickColor: "#d5d5d5",
-                    borderWidth: 1,
-                    color: '#d5d5d5'
-                },
-                colors: ["#1ab394", "#1C84C6"],
-                xaxis:{
-                },
-                yaxis: {
-                    ticks: 4
-                },
-                tooltip: false
-            }
-        );
-
-        var doughnutData = [
-            {
-                value: 300,
-                color: "#a3e1d4",
-                highlight: "#1ab394",
-                label: "App"
-            },
-            {
-                value: 50,
-                color: "#dedede",
-                highlight: "#1ab394",
-                label: "Software"
-            },
-            {
-                value: 100,
-                color: "#A4CEE8",
-                highlight: "#1ab394",
-                label: "Laptop"
-            }
+            { label: "Data 1", data: d1, color: '#17a084'},
+            { label: "Data 2", data: d2, color: '#127e68' }
         ];
 
-        var doughnutOptions = {
-            segmentShowStroke: true,
-            segmentStrokeColor: "#fff",
-            segmentStrokeWidth: 2,
-            percentageInnerCutout: 45, // This is 0 for Pie charts
-            animationSteps: 100,
-            animationEasing: "easeOutBounce",
-            animateRotate: true,
-            animateScale: false
+        var lineData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+                {
+                    label: "Example dataset",
+                    fillColor: "rgba(220,220,220,0.5)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [65, 59, 40, 51, 36, 25, 40]
+                },
+                {
+                    label: "Example dataset",
+                    fillColor: "rgba(26,179,148,0.5)",
+                    strokeColor: "rgba(26,179,148,0.7)",
+                    pointColor: "rgba(26,179,148,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(26,179,148,1)",
+                    data: [48, 48, 60, 39, 56, 37, 30]
+                }
+            ]
         };
 
-        var ctx = document.getElementById("doughnutChart").getContext("2d");
-        var DoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
-
-        var polarData = [
-            {
-                value: 300,
-                color: "#a3e1d4",
-                highlight: "#1ab394",
-                label: "App"
-            },
-            {
-                value: 140,
-                color: "#dedede",
-                highlight: "#1ab394",
-                label: "Software"
-            },
-            {
-                value: 200,
-                color: "#A4CEE8",
-                highlight: "#1ab394",
-                label: "Laptop"
-            }
-        ];
-
-        var polarOptions = {
-            scaleShowLabelBackdrop: true,
-            scaleBackdropColor: "rgba(255,255,255,0.75)",
-            scaleBeginAtZero: true,
-            scaleBackdropPaddingY: 1,
-            scaleBackdropPaddingX: 1,
-            scaleShowLine: true,
-            segmentShowStroke: true,
-            segmentStrokeColor: "#fff",
-            segmentStrokeWidth: 2,
-            animationSteps: 100,
-            animationEasing: "easeOutBounce",
-            animateRotate: true,
-            animateScale: false
+        var lineOptions = {
+            scaleShowGridLines: true,
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            scaleGridLineWidth: 1,
+            bezierCurve: true,
+            bezierCurveTension: 0.4,
+            pointDot: true,
+            pointDotRadius: 4,
+            pointDotStrokeWidth: 1,
+            pointHitDetectionRadius: 20,
+            datasetStroke: true,
+            datasetStrokeWidth: 2,
+            datasetFill: true,
+            responsive: true,
         };
-        var ctx = document.getElementById("polarChart").getContext("2d");
-        var Polarchart = new Chart(ctx).PolarArea(polarData, polarOptions);
+
+
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var myNewChart = new Chart(ctx).Line(lineData, lineOptions);
 
     });
 </script>

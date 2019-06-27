@@ -17,7 +17,7 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <!--                 <prop key="hibernate.show_sql">true</prop> -->
-                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/aided_driving</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/supply_chain</prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
                 <prop key="hibernate.c3p0.minPoolSize">5</prop>
                 <prop key="hibernate.c3p0.maxPoolSize">5000</prop>
@@ -28,6 +28,64 @@
                 <prop key="hibernate.c3p0.max_statements">10</prop>
                 <prop key="current_session_context_class">thread</prop>
             </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.power.dbc.Model.EnterpriseEntity</value>
+            </list>
+        </property>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath:com/power/dbc/Model/EnterpriseEntity.hbm.xml</value>
+                <value>classpath:com/power/dbc/Model/EnterpriseEntity.hbm.xml</value>
+                <value>classpath:com/power/dbc/Model/EnterpriseEntity.hbm.xml</value>
+                <value>classpath:com/power/dbc/Model/EnterpriseEntity.hbm.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <!--json转换器-->
+                <ref bean="mappingJacksonHttpMessageConverter" />
+            </list>
+        </property>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJacksonHttpMessageConverter" />
+            </list>
+        </property>
+    </bean>
+
+    <!--配置Controller中操作JSON返回格式-->
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name = "supportedMediaTypes">
+            <list>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="text"/>
+                    <constructor-arg index="1" value="plain"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="*"/>
+                    <constructor-arg index="1" value="*"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="text"/>
+                    <constructor-arg index="1" value="*"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="application"/>
+                    <constructor-arg index="1" value="json"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+            </list>
         </property>
     </bean>
     

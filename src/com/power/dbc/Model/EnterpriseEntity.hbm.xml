@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.power.dbc.Model.EnterpriseEntity" table="enterprise" schema="supply_chain">
+        <id name="enterpriseNumber">
+            <column name="EnterpriseNumber" sql-type="varchar(100)" length="100" not-null="true"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="account">
+            <column name="account" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="logoImage">
+            <column name="logoImage" sql-type="varchar(1000)" length="1000"/>
+        </property>
+        <property name="deadline">
+            <column name="deadline" sql-type="int(11)"/>
+        </property>
+        <property name="seniority">
+            <column name="seniority" sql-type="int(11)"/>
+        </property>
+        <property name="rank">
+            <column name="rank" sql-type="int(11)"/>
+        </property>
+        <property name="serviceFirst">
+            <column name="serviceFirst" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="serviceSecond">
+            <column name="serviceSecond" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="serviceThird">
+            <column name="serviceThird" sql-type="varchar(50)" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -15,6 +15,8 @@
     <title>小陌速派 | 登录</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+    <link href="css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -37,12 +39,13 @@
             <div class="ibox-content">
                 <form class="m-t" role="form">
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="请输入账号" required="">
+                        <input id="account" type="email" class="form-control" placeholder="请输入账号" required="" value="">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="请输入密码" required="">
+                        <input id="password" type="password" class="form-control" placeholder="请输入密码" required="" value="">
                     </div>
-                    <a href="/Index"><button type="button" class="btn btn-primary block full-width m-b">登录</button></a>
+                    <%--<button type="button" class="btn btn-primary block full-width m-b">登录</button>--%>
+                    <button class="ladda-button ladda-button-demo btn btn-primary block full-width m-b" data-style="zoom-in">登录</button>
                     <a href="#">
                         <small>忘记密码?</small>
                     </a>
@@ -67,6 +70,71 @@
         </div>
     </div>
 </div>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<script src="js/plugins/ladda/spin.min.js"></script>
+<script src="js/plugins/ladda/ladda.min.js"></script>
+<script src="js/plugins/ladda/ladda.jquery.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        sessionStorage.setItem("enterpriseInfo", "");
+
+        var login = $( '.ladda-button-demo' ).ladda();
+        login.click(function(){
+            login.ladda( 'start' );
+            $.ajax({
+                method: "POST",
+                url: "/LoginCheck",
+                dataType: "json",
+                data: {'account':$('#account').val(),'password':$('#password').val()},/*$("form").serialise()*/
+                success: function (data) {
+                    if(data.flag == "2"){
+                        swal({
+                            title: "登录失败!",
+                            text: "您的此账号使用期已到!",
+                            type: "error"
+                        });
+                    }else if(data.flag != "1"){
+                        swal({
+                            title: "登录失败!",
+                            text: "账号或密码错误!",
+                            type: "error"
+                        });
+                    }else{
+                        if(data.Dflag == "1"){
+                            swal({
+                                title: "注意使用期!",
+                                text: "您的账号使用期还有 " + data.deadline + " 天!",
+                                type: "warning",
+                            },function () {
+                                sessionStorage.setItem("enterpriseInfo", JSON.stringify(data));
+                                window.location.href = "/Index";
+                            });
+                        }else{
+                            window.location.href = "/Index";
+                        }
+                    }
+                    login.ladda('stop');
+                },
+                beforeSend: function () {},
+                error: function () {
+                    swal({
+                        title: "出现错误!",
+                        text: "网络参数出现错误!",
+                        type: "error"
+                    });
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
 
