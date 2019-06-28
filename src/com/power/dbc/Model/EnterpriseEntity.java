@@ -11,9 +11,6 @@ import java.util.Objects;
  **/
 @Entity
 @Table(name = "enterprise", schema = "supply_chain", catalog = "")
-@NamedQueries({
-        @NamedQuery(name = "Enterprise.FindAll", query = "select enterpriseEneity from EnterpriseEntity enterpriseEneity")
-})
 public class EnterpriseEntity {
     private String name;
     private String account;

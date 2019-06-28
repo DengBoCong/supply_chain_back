@@ -6,6 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" +
+            request.getServerName() + ":" +
+            request.getServerPort() + path;
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,107 +49,107 @@
                             </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="ConfigurationEnterpriseInfo/Index">企业信息</a></li>
+                            <li><a href="<%=basePath%>/ConfigurationEnterpriseInfo/Index">企业信息</a></li>
                             <li><a href="contacts.html">下属账户</a></li>
                             <li class="divider"></li>
-                            <li><a href="login.html">退出系统</a></li>
+                            <li><a href="<%=basePath%>/Login">退出系统</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
                         小陌
                     </div>
                 </li>
-                <li class="active">
-                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">企业简报</span></a>
+                <li>
+                    <a href="<%=basePath%>/Index"><i class="fa fa-th-large"></i> <span class="nav-label">企业简报</span></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-box-open"></i> <span class="nav-label">商品</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="CommocityRecord/Index">商品档案</a></li>
-                        <li><a href="CommodityClassify/Index">商品分类</a></li>
-                        <li><a href="CommodityData/Index">辅助资料</a></li>
-                        <li><a href="CommodityImage/Index">商品图片</a></li>
+                        <li><a href="<%=basePath%>/CommocityRecord/Index">商品档案</a></li>
+                        <li><a href="<%=basePath%>/CommodityClassify/Index">商品分类</a></li>
+                        <li><a href="<%=basePath%>/CommodityData/Index">辅助资料</a></li>
+                        <li><a href="<%=basePath%>/CommodityImage/Index">商品图片</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="layouts.html"><i class="fa fa-file-alt"></i> <span class="nav-label">订单</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="OrderTabulate/Index">订单列表</a></li>
-                        <li><a href="OrderReturnManage/Index">退货管理</a></li>
-                        <li><a href="OrderAfterSalesManage/Index">售后管理</a></li>
-                        <li><a href="OrderCancellation/Index">取消订单</a></li>
+                        <li><a href="<%=basePath%>/OrderTabulate/Index">订单列表</a></li>
+                        <li><a href="<%=basePath%>/OrderReturnManage/Index">退货管理</a></li>
+                        <li><a href="<%=basePath%>/OrderAfterSalesManage/Index">售后管理</a></li>
+                        <li><a href="<%=basePath%>/OrderCancellation/Index">取消订单</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-archive"></i> <span class="nav-label">采购</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="PurchaseOrder/Index">采购单</a></li>
-                        <li><a href="PurchaseReturn/Index">采购退回</a></li>
-                        <li><a href="PurchaseHistory/Index">采购历史</a></li>
-                        <li><a href="PurchaseAgent/Index">供应商</a></li>
-                        <li><a href="PurchaseSupplier/Index">采购员</a></li>
+                        <li><a href="<%=basePath%>/PurchaseOrder/Index">采购单</a></li>
+                        <li><a href="<%=basePath%>/PurchaseReturn/Index">采购退回</a></li>
+                        <li><a href="<%=basePath%>/PurchaseHistory/Index">采购历史</a></li>
+                        <li><a href="<%=basePath%>/PurchaseAgent/Index">供应商</a></li>
+                        <li><a href="<%=basePath%>/PurchaseSupplier/Index">采购员</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="mailbox.html"><i class="fa fa-archway"></i> <span class="nav-label">库房 </span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="StorehouseSeparatePrint/Index">分拣打印</a></li>
-                        <li><a href="StorehouseWeight/Index">摘果称重</a></li>
-                        <li><a href="StorehouseSorter/Index">分拣员</a></li>
-                        <li><a href="StorehouseSortHistory/Index">分拣历史</a></li>
-                        <li><a href="StorehouseEnterManage/Index">入库管理</a></li>
-                        <li><a href="StorehouseOutManage/Index">出库管理</a></li>
-                        <li><a href="StorehouseDeliverOut/Index">发货出库</a></li>
-                        <li><a href="StorehouseStockTaking/Index">库存盘点</a></li>
-                        <li><a href="StorehouseLossesOverflow/Index">报损报溢</a></li>
+                        <li><a href="<%=basePath%>/StorehouseSeparatePrint/Index">分拣打印</a></li>
+                        <li><a href="<%=basePath%>/StorehouseWeight/Index">摘果称重</a></li>
+                        <li><a href="<%=basePath%>/StorehouseSorter/Index">分拣员</a></li>
+                        <li><a href="<%=basePath%>/StorehouseSortHistory/Index">分拣历史</a></li>
+                        <li><a href="<%=basePath%>/StorehouseEnterManage/Index">入库管理</a></li>
+                        <li><a href="<%=basePath%>/StorehouseOutManage/Index">出库管理</a></li>
+                        <li><a href="<%=basePath%>/StorehouseDeliverOut/Index">发货出库</a></li>
+                        <li><a href="<%=basePath%>/StorehouseStockTaking/Index">库存盘点</a></li>
+                        <li><a href="<%=basePath%>/StorehouseLossesOverflow/Index">报损报溢</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="metrics.html"><i class="fa fa-car-side"></i> <span class="nav-label">配送</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="DistributionRoute/Index">线路</a></li>
-                        <li><a href="DistributionArea/Index">区域</a></li>
-                        <li><a href="DistributionMap/Index">配送地图</a></li>
-                        <li><a href="DistributionWay/Index">配送方式</a></li>
+                        <li><a href="<%=basePath%>/DistributionRoute/Index">线路</a></li>
+                        <li><a href="<%=basePath%>/DistributionArea/Index">区域</a></li>
+                        <li><a href="<%=basePath%>/DistributionMap/Index">配送地图</a></li>
+                        <li><a href="<%=basePath%>/DistributionWay/Index">配送方式</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="widgets.html"><i class="fa fa-id-badge"></i> <span class="nav-label">客户</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="CustomerRecord/Index">客户档案</a></li>
-                        <li><a href="CustomerType/Index">客户类型</a></li>
-                        <li><a href="CustomerGroupManage/Index">集团管理</a></li>
-                        <li><a href="CustomerNoticeboard/Index">客户看板</a></li>
-                        <li><a href="CustomerOrdersPlaced/Index">下单情况</a></li>
-                        <li><a href="CustomerOrderHistory/Index">订单历史</a></li>
+                        <li><a href="<%=basePath%>/CustomerRecord/Index">客户档案</a></li>
+                        <li><a href="<%=basePath%>/CustomerType/Index">客户类型</a></li>
+                        <li><a href="<%=basePath%>/CustomerGroupManage/Index">集团管理</a></li>
+                        <li><a href="<%=basePath%>/CustomerNoticeboard/Index">客户看板</a></li>
+                        <li><a href="<%=basePath%>/CustomerOrdersPlaced/Index">下单情况</a></li>
+                        <li><a href="<%=basePath%>/CustomerOrderHistory/Index">订单历史</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="widgets.html"><i class="fa fa-address-card"></i> <span class="nav-label">团长</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="AgencyClassification/Index">团长类别</a></li>
-                        <li><a href="AgencyRank/Index">团长等级</a></li>
-                        <li><a href="AgencyDeliver/Index">配送单</a></li>
-                        <li><a href="AgencyDeliverAbnormal/Index">异常配送单</a></li>
-                        <li><a href="AgencyDeliverDather/Index">配送汇总</a></li>
-                        <li><a href="AgencySiblings/Index">团长排行</a></li>
-                        <li><a href="AgencyRecommend/Index">团长推荐</a></li>
+                        <li><a href="<%=basePath%>/AgencyClassification/Index">团长类别</a></li>
+                        <li><a href="<%=basePath%>/AgencyRank/Index">团长等级</a></li>
+                        <li><a href="<%=basePath%>/AgencyDeliver/Index">配送单</a></li>
+                        <li><a href="<%=basePath%>/AgencyDeliverAbnormal/Index">异常配送单</a></li>
+                        <li><a href="<%=basePath%>/AgencyDeliverDather/Index">配送汇总</a></li>
+                        <li><a href="<%=basePath%>/AgencySiblings/Index">团长排行</a></li>
+                        <li><a href="<%=basePath%>/AgencyRecommend/Index">团长推荐</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">营销</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="MarketingSecondsKill/Index">秒杀商品</a></li>
-                        <li><a href="MarketingFlashSale/Index">限时抢购</a></li>
-                        <li><a href="MarketingGroupPurchase/Index">精品团购</a></li>
-                        <li><a href="MarketingClassificationActivities/Index">活动分类</a></li>
-                        <li><a href="MarketingCoupon/Index">优惠券</a></li>
-                        <li><a href="MarketingNewTicket/Index">新人券</a></li>
-                        <li><a href="MarketingShareCoupons">分享券</a></li>
-                        <li><a href="MarketingCustomerRecommended">会员推荐</a></li>
-                        <li><a href="MarketingGiftPacks/Index">大礼包</a></li>
-                        <li><a href="MarketingManage/Index">销售管理</a></li>
-                        <li><a href="MarketingExploit/Index">销售业绩</a></li>
+                        <li><a href="<%=basePath%>/MarketingSecondsKill/Index">秒杀商品</a></li>
+                        <li><a href="<%=basePath%>/MarketingFlashSale/Index">限时抢购</a></li>
+                        <li><a href="<%=basePath%>/MarketingGroupPurchase/Index">精品团购</a></li>
+                        <li><a href="<%=basePath%>/MarketingClassificationActivities/Index">活动分类</a></li>
+                        <li><a href="<%=basePath%>/MarketingCoupon/Index">优惠券</a></li>
+                        <li><a href="<%=basePath%>/MarketingNewTicket/Index">新人券</a></li>
+                        <li><a href="<%=basePath%>/MarketingShareCoupons">分享券</a></li>
+                        <li><a href="<%=basePath%>/MarketingCustomerRecommended">会员推荐</a></li>
+                        <li><a href="<%=basePath%>/MarketingGiftPacks/Index">大礼包</a></li>
+                        <li><a href="<%=basePath%>/MarketingManage/Index">销售管理</a></li>
+                        <li><a href="<%=basePath%>/MarketingExploit/Index">销售业绩</a></li>
                     </ul>
                 </li>
                 <li>
@@ -173,11 +179,11 @@
                 <li>
                     <a href="#"><i class="fa fa-chart-line"></i> <span class="nav-label">财务</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="FinacialAgencyDraw/Index">团长结算</a></li>
-                        <li><a href="FinacialAgencySettle/Index">团长提现</a></li>
-                        <li><a href="FinacialCustomerDraw/Index">会员结算</a></li>
-                        <li><a href="FinacialCustomerSettle/Index">会员提现</a></li>
-                        <li><a href="FinacialPurchaseSettle/Index">采购结算</a></li>
+                        <li><a href="<%=basePath%>/FinacialAgencyDraw/Index">团长结算</a></li>
+                        <li><a href="<%=basePath%>/FinacialAgencySettle/Index">团长提现</a></li>
+                        <li><a href="<%=basePath%>/FinacialCustomerDraw/Index">会员结算</a></li>
+                        <li><a href="<%=basePath%>/FinacialCustomerSettle/Index">会员提现</a></li>
+                        <li><a href="<%=basePath%>/FinacialPurchaseSettle/Index">采购结算</a></li>
                     </ul>
                 </li>
                 <li>
@@ -193,16 +199,16 @@
                 <li>
                     <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">参数配置</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="ConfigurationSystemPara/Index">系统参数</a></li>
-                        <li><a href="ConfigurationOperationLog/Index">操作日志</a></li>
-                        <li><a href="ConfigurationDeliveryTime/Index">送货时间</a></li>
-                        <li><a href="ConfigurationCloudSlice/Index">云片配置</a></li>
-                        <li><a href="ConfigurationWechat/Index">微信配置</a></li>
-                        <li><a href="ConfigurationPrintTemp/Index">打印模板</a></li>
-                        <li><a href="ConfigurationPrintSetting/Index">打印配置</a></li>
-                        <li><a href="ConfigurationOperatorManage/Index">操作员管理</a></li>
-                        <li><a href="ConfigurationRoleManage/Index">角色管理</a></li>
-                        <li><a href="ConfigurationOperatingHours/Index">运营时段配置</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationSystemPara/Index">系统参数</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationOperationLog/Index">操作日志</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationDeliveryTime/Index">送货时间</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationCloudSlice/Index">云片配置</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationWechat/Index">微信配置</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationPrintTemp/Index">打印模板</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationPrintSetting/Index">打印配置</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationOperatorManage/Index">操作员管理</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationRoleManage/Index">角色管理</a></li>
+                        <li><a href="<%=basePath%>/ConfigurationOperatingHours/Index">运营时段配置</a></li>
                     </ul>
                 </li>
                 <li>
@@ -236,7 +242,7 @@
                         <span class="m-r-sm text-muted welcome-message">欢迎使用 小陌速派后台控制系统</span>
                     </li>
                     <li>
-                        <a href="/Login">
+                        <a href="<%=basePath%>/Login">
                             <i class="fa fa-sign-out"></i> 退出系统
                         </a>
                     </li>
@@ -321,357 +327,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer">
-                    <div class="pull-right">
-                        版权所有 <strong>江西陌梦教育科技有限公司</strong>
-                    </div>
-                    <div>
-                        <strong>Copyright</strong> MoMeng &copy; 2019
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-    <div id="right-sidebar">
-        <div class="sidebar-container">
-            <ul class="nav nav-tabs navs-3">
-                <li class="active"><a data-toggle="tab" href="#tab-1">
-                    Notes
-                </a></li>
-                <li><a data-toggle="tab" href="#tab-2">
-                    Projects
-                </a></li>
-                <li class=""><a data-toggle="tab" href="#tab-3">
-                    <i class="fa fa-gear"></i>
-                </a></li>
-            </ul>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane active">
-                    <div class="sidebar-title">
-                        <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
-                        <small><i class="fa fa-tim"></i> You have 10 new message.</small>
-                    </div>
-                    <div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
-                                    <div class="m-t-xs">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    There are many variations of passages of Lorem Ipsum available.
-                                    <br>
-                                    <small class="text-muted">Today 4:21 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
-                                </div>
-                                <div class="media-body">
-                                    The point of using Lorem Ipsum is that it has a more-or-less normal.
-                                    <br>
-                                    <small class="text-muted">Yesterday 2:45 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-                                    <div class="m-t-xs">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                    <br>
-                                    <small class="text-muted">Yesterday 1:10 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                                </div>
-                                <div class="media-body">
-                                    Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                                    <br>
-                                    <small class="text-muted">Monday 8:37 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
-                                </div>
-                                <div class="media-body">
-                                    All the Lorem Ipsum generators on the Internet tend to repeat.
-                                    <br>
-                                    <small class="text-muted">Today 4:21 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
-                                </div>
-                                <div class="media-body">
-                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                    <br>
-                                    <small class="text-muted">Yesterday 2:45 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
-                                    <div class="m-t-xs">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
-                                    <br>
-                                    <small class="text-muted">Yesterday 1:10 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sidebar-message">
-                            <a href="#">
-                                <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
-                                </div>
-                                <div class="media-body">
-                                    Uncover many web sites still in their infancy. Various versions have.
-                                    <br>
-                                    <small class="text-muted">Monday 8:37 pm</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-2" class="tab-pane">
-                    <div class="sidebar-title">
-                        <h3> <i class="fa fa-cube"></i> Latest projects</h3>
-                        <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
-                    </div>
-                    <ul class="sidebar-list">
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Business valuation</h4>
-                                It is a long established fact that a reader will be distracted.
-                                <div class="small">Completion with: 22%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                                </div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Contract with Company </h4>
-                                Many desktop publishing packages and web page editors.
-                                <div class="small">Completion with: 48%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 48%;" class="progress-bar"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Meeting</h4>
-                                By the readable content of a page when looking at its layout.
-                                <div class="small">Completion with: 14%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="label label-primary pull-right">NEW</span>
-                                <h4>The generated</h4>
-
-                                There are many variations of passages of Lorem Ipsum available.
-                                <div class="small">Completion with: 22%</div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Business valuation</h4>
-                                It is a long established fact that a reader will be distracted.
-                                <div class="small">Completion with: 22%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
-                                </div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Contract with Company </h4>
-                                Many desktop publishing packages and web page editors.
-                                <div class="small">Completion with: 48%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 48%;" class="progress-bar"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="small pull-right m-t-xs">9 hours ago</div>
-                                <h4>Meeting</h4>
-                                By the readable content of a page when looking at its layout.
-                                <div class="small">Completion with: 14%</div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="label label-primary pull-right">NEW</span>
-                                <h4>The generated</h4>
-
-                                There are many variations of passages of Lorem Ipsum available.
-                                <div class="small">Completion with: 22%</div>
-                                <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tab-3" class="tab-pane">
-                    <div class="sidebar-title">
-                        <h3><i class="fa fa-gears"></i> Settings</h3>
-                        <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
-                    </div>
-                    <div class="setings-item">
-<span>
-Show notifications
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-                                <label class="onoffswitch-label" for="example">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-<span>
-Disable Chat
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
-                                <label class="onoffswitch-label" for="example2">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-<span>
-Enable history
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-                                <label class="onoffswitch-label" for="example3">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-<span>
-Show charts
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
-                                <label class="onoffswitch-label" for="example4">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-<span>
-Offline users
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
-                                <label class="onoffswitch-label" for="example5">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-<span>
-Global search
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
-                                <label class="onoffswitch-label" for="example6">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="setings-item">
-<span>
-Update everyday
-</span>
-                        <div class="switch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
-                                <label class="onoffswitch-label" for="example7">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar-content">
-                        <h4>Settings</h4>
-                        <div class="small">
-                            I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            And typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                            Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </div>
-                    </div>
-                </div>
+        <div class="footer">
+            <div class="pull-right">
+                版权所有 <strong>江西陌梦教育科技有限公司</strong>
+            </div>
+            <div>
+                <strong>Copyright</strong> MoMeng &copy; 2019
             </div>
         </div>
     </div>
@@ -764,7 +427,8 @@ Update everyday
                    swal({
                        title: "出现错误!",
                        text: "网络参数出现错误!",
-                       type: "error"
+                       type: "error",
+                       confirmButtonText: "确定",
                    });
                },
                beforeSend: function(){}
@@ -795,6 +459,7 @@ Update everyday
                             title: "提交失败!",
                             text: "提交出现错误，请检查网络",
                             type: "error",
+                            confirmButtonText: "确定",
                         });
                     }
                 },
@@ -805,7 +470,8 @@ Update everyday
                     swal({
                         title: "出现错误!",
                         text: "网络参数出现错误!",
-                        type: "error"
+                        type: "error",
+                        confirmButtonText: "确定",
                     });
                 },
             });

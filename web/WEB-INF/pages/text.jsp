@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSPINIA | File Upload</title>
+    <title>INSPINIA | Nestable list</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
-    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -77,13 +75,13 @@
                 <li>
                     <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
+                    <ul class="nav nav-second-level collapse">
                         <li><a href="form_basic.html">Basic form</a></li>
                         <li><a href="form_advanced.html">Advanced Plugins</a></li>
                         <li><a href="form_wizard.html">Wizard</a></li>
-                        <li class="active"><a href="form_file_upload.html">File Upload</a></li>
+                        <li><a href="form_file_upload.html">File Upload</a></li>
                         <li><a href="form_editors.html">Text Editor</a></li>
                         <li><a href="form_markdown.html">Markdown</a></li>
                     </ul>
@@ -127,11 +125,11 @@
                         <li><a href="empty_page.html">Empty page</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="active">
                     <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Miscellaneous</span><span class="label label-info pull-right">NEW</span></a>
-                    <ul class="nav nav-second-level collapse">
+                    <ul class="nav nav-second-level">
                         <li><a href="toastr_notifications.html">Notification</a></li>
-                        <li><a href="nestable_list.html">Nestable list</a></li>
+                        <li class="active"><a href="nestable_list.html">Nestable list</a></li>
                         <li><a href="agile_board.html">Agile board</a></li>
                         <li><a href="timeline_2.html">Timeline v.2</a></li>
                         <li><a href="diff.html">Diff</a></li>
@@ -356,54 +354,150 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-lg-10">
-                <h2>File upload</h2>
+                <h2>Nestable list</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a>Forms</a>
+                        <a>Tables</a>
                     </li>
                     <li class="active">
-                        <strong>File upload</strong>
+                        <strong>Nestable list</strong>
                     </li>
                 </ol>
             </div>
             <div class="col-lg-2">
             </div>
         </div>
-        <div class="wrapper wrapper-content animated fadeIn">
+        <div class="wrapper wrapper-content  animated fadeInRight">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="ibox float-e-margins">
+                <div class="col-md-4">
+                    <div id="nestable-menu">
+                        <button type="button" data-action="expand-all" class="btn btn-white btn-sm">Expand All</button>
+                        <button type="button" data-action="collapse-all" class="btn btn-white btn-sm">Collapse All</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Dropzone Area</h5>
-                            <div class="ibox-tools">
-                                <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-user">
-                                    <li><a href="#">Config option 1</a>
-                                    </li>
-                                    <li><a href="#">Config option 2</a>
-                                    </li>
-                                </ul>
-                                <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </div>
+                            <h5>Nestable basic list</h5>
                         </div>
                         <div class="ibox-content">
-                            <form id="my-awesome-dropzone" class="dropzone" action="#">
-                                <div class="dropzone-previews"></div>
-                                <button type="submit" class="btn btn-primary pull-right">Submit this form!</button>
-                            </form>
-                            <div>
-                                <div class="m text-right"><small>DropzoneJS is an open source library that provides drag'n'drop file uploads with image previews: <a href="https://github.com/enyo/dropzone" target="_blank">https://github.com/enyo/dropzone</a></small> </div>
+                            <p class="m-b-lg">
+                                <strong>Nestable</strong> is an interactive hierarchical list. You can drag and drop to rearrange the order. It works well on touch-screens.
+                            </p>
+                            <div class="dd" id="nestable">
+                                <ol class="dd-list">
+                                    <li class="dd-item" data-id="1">
+                                        <div class="dd-handle">1 - Lorem ipsum</div>
+                                    </li>
+                                    <li class="dd-item" data-id="2">
+                                        <div class="dd-handle">2 - Dolor sit</div>
+                                        <ol class="dd-list">
+                                            <li class="dd-item" data-id="3">
+                                                <div class="dd-handle">3 - Adipiscing elit</div>
+                                            </li>
+                                            <li class="dd-item" data-id="4">
+                                                <div class="dd-handle">4 - Nonummy nibh</div>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="dd-item" data-id="5">
+                                        <div class="dd-handle">5 - Consectetuer</div>
+                                        <ol class="dd-list">
+                                            <li class="dd-item" data-id="6">
+                                                <div class="dd-handle">6 - Aliquam erat</div>
+                                            </li>
+                                            <li class="dd-item" data-id="7">
+                                                <div class="dd-handle">7 - Veniam quis</div>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="dd-item" data-id="8">
+                                        <div class="dd-handle">8 - Tation ullamcorper</div>
+                                    </li>
+                                    <li class="dd-item" data-id="9">
+                                        <div class="dd-handle">9 - Ea commodo</div>
+                                    </li>
+                                </ol>
                             </div>
+                            <div class="m-t-md">
+                                <h5>Serialised Output</h5>
+                            </div>
+                            <textarea id="nestable-output" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Nestable custom theme list</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p class="m-b-lg">
+                                Each list you can customize by standard css styles. Each element is responsive so you can add to it any other element to improve functionality of list.
+                            </p>
+                            <div class="dd" id="nestable2">
+                                <ol class="dd-list">
+                                    <li class="dd-item" data-id="1">
+                                        <div class="dd-handle">
+                                            <span class="label label-info"><i class="fa fa-users"></i></span> Cras ornare tristique.
+                                        </div>
+                                        <ol class="dd-list">
+                                            <li class="dd-item" data-id="2">
+                                                <div class="dd-handle">
+                                                    <span class="pull-right"> 12:00 pm </span>
+                                                    <span class="label label-info"><i class="fa fa-cog"></i></span> Vivamus vestibulum nulla nec ante.
+                                                </div>
+                                            </li>
+                                            <li class="dd-item" data-id="3">
+                                                <div class="dd-handle">
+                                                    <span class="pull-right"> 11:00 pm </span>
+                                                    <span class="label label-info"><i class="fa fa-bolt"></i></span> Nunc dignissim risus id metus.
+                                                </div>
+                                            </li>
+                                            <li class="dd-item" data-id="4">
+                                                <div class="dd-handle">
+                                                    <span class="pull-right"> 11:00 pm </span>
+                                                    <span class="label label-info"><i class="fa fa-laptop"></i></span> Vestibulum commodo
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="dd-item" data-id="5">
+                                        <div class="dd-handle">
+                                            <span class="label label-warning"><i class="fa fa-users"></i></span> Integer vitae libero.
+                                        </div>
+                                        <ol class="dd-list">
+                                            <li class="dd-item" data-id="6">
+                                                <div class="dd-handle">
+                                                    <span class="pull-right"> 15:00 pm </span>
+                                                    <span class="label label-warning"><i class="fa fa-users"></i></span> Nam convallis pellentesque nisl.
+                                                </div>
+                                            </li>
+                                            <li class="dd-item" data-id="7">
+                                                <div class="dd-handle">
+                                                    <span class="pull-right"> 16:00 pm </span>
+                                                    <span class="label label-warning"><i class="fa fa-bomb"></i></span> Vivamus molestie gravida turpis
+                                                </div>
+                                            </li>
+                                            <li class="dd-item" data-id="8">
+                                                <div class="dd-handle">
+                                                    <span class="pull-right"> 21:00 pm </span>
+                                                    <span class="label label-warning"><i class="fa fa-child"></i></span> Ut aliquam sollicitudin leo.
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="m-t-md">
+                                <h5>Serialised Output</h5>
+                            </div>
+                            <textarea id="nestable2-output" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
@@ -425,39 +519,46 @@
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+<script src="js/plugins/nestable/jquery.nestable.js"></script>
+
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
-
-<script src="js/plugins/dropzone/dropzone.js"></script>
 <script>
     $(document).ready(function(){
 
-        Dropzone.options.myAwesomeDropzone = {
-
-            autoProcessQueue: false,
-            uploadMultiple: true,
-            parallelUploads: 100,
-            maxFiles: 100,
-
-            // Dropzone settings
-            init: function() {
-                var myDropzone = this;
-
-                this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    myDropzone.processQueue();
-                });
-                this.on("sendingmultiple", function() {
-                });
-                this.on("successmultiple", function(files, response) {
-                });
-                this.on("errormultiple", function(files, response) {
-                });
+        var updateOutput = function (e) {
+            var list = e.length ? e : $(e.target),
+                output = list.data('output');
+            if (window.JSON) {
+                output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+            } else {
+                output.val('JSON browser support required for this demo.');
             }
+        };
+        // activate Nestable for list 1
+        $('#nestable').nestable({
+            group: 1
+        }).on('change', updateOutput);
 
-        }
+        // activate Nestable for list 2
+        $('#nestable2').nestable({
+            group: 1
+        }).on('change', updateOutput);
 
+        // output initial serialised data
+        updateOutput($('#nestable').data('output', $('#nestable-output')));
+        updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+
+        $('#nestable-menu').on('click', function (e) {
+            var target = $(e.target),
+                action = target.data('action');
+            if (action === 'expand-all') {
+                $('.dd').nestable('expandAll');
+            }
+            if (action === 'collapse-all') {
+                $('.dd').nestable('collapseAll');
+            }
+        });
     });
 </script>
 </body>

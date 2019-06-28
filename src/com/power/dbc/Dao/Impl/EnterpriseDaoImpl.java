@@ -46,8 +46,8 @@ public class EnterpriseDaoImpl implements EnterpriseDao {
     public List<EnterpriseEntity> list() {
         Session session = sessionFactory.openSession();
         List<EnterpriseEntity> list = session
-                .createNamedQuery("Enterprise.FindAll", EnterpriseEntity.class)
-                .getResultList();
+                .createQuery("from EnterpriseEntity ")
+                .list();
         session.close();
         return list;
     }

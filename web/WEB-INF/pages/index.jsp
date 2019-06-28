@@ -6,7 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" +
+            request.getServerName() + ":" +
+            request.getServerPort() + path;
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +47,7 @@
                             <li><a href="ConfigurationEnterpriseInfo/Index">企业信息</a></li>
                             <li><a href="contacts.html">下属账户</a></li>
                             <li class="divider"></li>
-                            <li><a href="login.html">退出系统</a></li>
+                            <li><a href="<%=basePath%>/Login">退出系统</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
@@ -55,7 +60,7 @@
                 <li>
                     <a href="#"><i class="fa fa-box-open"></i> <span class="nav-label">商品</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="CommocityRecord/Index">商品档案</a></li>
+                        <li><a href="CommodityRecord/Index">商品档案</a></li>
                         <li><a href="CommodityClassify/Index">商品分类</a></li>
                         <li><a href="CommodityData/Index">辅助资料</a></li>
                         <li><a href="CommodityImage/Index">商品图片</a></li>

@@ -99,13 +99,15 @@
                         swal({
                             title: "登录失败!",
                             text: "您的此账号使用期已到!",
-                            type: "error"
+                            type: "error",
+                            confirmButtonText: "确定",
                         });
                     }else if(data.flag != "1"){
                         swal({
                             title: "登录失败!",
                             text: "账号或密码错误!",
-                            type: "error"
+                            type: "error",
+                            confirmButtonText: "确定",
                         });
                     }else{
                         if(data.Dflag == "1"){
@@ -113,6 +115,7 @@
                                 title: "注意使用期!",
                                 text: "您的账号使用期还有 " + data.deadline + " 天!",
                                 type: "warning",
+                                confirmButtonText: "确定",
                             },function () {
                                 sessionStorage.setItem("enterpriseInfo", JSON.stringify(data));
                                 window.location.href = "/Index";
@@ -128,7 +131,8 @@
                     swal({
                         title: "出现错误!",
                         text: "网络参数出现错误!",
-                        type: "error"
+                        type: "error",
+                        confirmButtonText: "确定",
                     });
                 }
             });
