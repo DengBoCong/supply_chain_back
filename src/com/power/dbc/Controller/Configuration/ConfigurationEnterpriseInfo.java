@@ -4,6 +4,7 @@ import com.power.dbc.Service.EnterpriseService;
 import com.power.dbc.Utils.FileUploadUtil;
 import com.power.dbc.Utils.ReflectUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -29,6 +30,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/ConfigurationEnterpriseInfo")
 public class ConfigurationEnterpriseInfo {
+    @Qualifier("enterpriseService")
     @Autowired
     private EnterpriseService enterpriseService;
 

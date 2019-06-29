@@ -33,6 +33,7 @@
             <list>
                 <value>com.power.dbc.Model.EnterpriseEntity</value>
                 <value>com.power.dbc.Model.CommodityEntity</value>
+                <value>com.power.dbc.Model.CommodityClassEntity</value>
             </list>
         </property>
         <property name="mappingLocations">
@@ -44,6 +45,8 @@
                 <value>classpath:com/power/dbc/Model/CommodityEntity.hbm.xml</value>
                 <value>classpath:com/power/dbc/Model/CommodityEntity.hbm.xml</value>
                 <value>classpath:com/power/dbc/Model/CommodityEntity.hbm.xml</value>
+                <value>classpath:com/power/dbc/Model/CommodityClassEntity.hbm.xml</value>
+                <value>classpath:com/power/dbc/Model/CommodityClassEntity.hbm.xml</value>
             </list>
         </property>
     </bean>

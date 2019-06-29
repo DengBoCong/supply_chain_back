@@ -1,6 +1,9 @@
 package com.power.dbc.Utils;
 
+import com.power.dbc.Model.CommodityClassEntity;
 import com.power.dbc.Model.EnterpriseEntity;
+
+import java.util.UUID;
 
 /**
  * @program: supply_chain_back
@@ -23,5 +26,14 @@ public class SetNullUtil {
         enterpriseEntity.setSeniority(-1);
         enterpriseEntity.setEnterpriseNumber(null);
         return enterpriseEntity;
+    }
+
+    public static CommodityClassEntity setCommodityClassNull(){
+        CommodityClassEntity commodityClassEntity = new CommodityClassEntity();
+        commodityClassEntity.setNumber(null);
+        commodityClassEntity.setAlais(null);
+        commodityClassEntity.setName(null);
+        commodityClassEntity.setOwner(null);
+        return commodityClassEntity;
     }
 }

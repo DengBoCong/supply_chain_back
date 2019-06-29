@@ -17,7 +17,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="sessionFactory" />
+          <unit-entry name="sessionFactory" value="dbd9004b-bfd2-4264-b529-bc1f78fd954f" />
         </datasource-map>
         <naming-strategy-map />
       </configuration>
@@ -39,5 +39,6 @@
     <orderEntry type="library" name="commons-io-2.5" level="project" />
     <orderEntry type="library" name="ezmorph-1.0.4" level="project" />
     <orderEntry type="library" name="jackson-annotations-2.7.4" level="project" />
+    <orderEntry type="library" name="jstl" level="project" />
   </component>
 </module>

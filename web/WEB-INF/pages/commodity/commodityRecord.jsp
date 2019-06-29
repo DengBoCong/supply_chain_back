@@ -527,7 +527,7 @@
                                    text: "请重新刷新进行重试!",
                                    type: "error",
                                    confirmButtonText: "确定",
-                               },function(){window.location.reload();});
+                               },function(){});
                            }
                        },
                        error: function(){
@@ -536,7 +536,7 @@
                                text: "网络参数出现错误!",
                                type: "error",
                                confirmButtonText: "确定",
-                           },function(){window.location.reload();});
+                           },function(){});
                        }
                     });
                 });

@@ -4,6 +4,7 @@ import com.power.dbc.Dao.CommodityDao;
 import com.power.dbc.Model.CommodityEntity;
 import com.power.dbc.Service.CommodityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +19,7 @@ import java.util.List;
 @Service("commodityService")
 @Transactional
 public class CommodityServiceImpl implements CommodityService {
+    @Qualifier("commodityDao")
     @Autowired
     private CommodityDao commodityDao;
 

@@ -3,6 +3,7 @@ package com.power.dbc.Controller.Commodity;
 import com.power.dbc.Model.CommodityEntity;
 import com.power.dbc.Service.CommodityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,7 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/CommodityRecord")
 public class CommodityRecordController {
+    @Qualifier("commodityService")
     @Autowired
     private CommodityService commodityService;
 

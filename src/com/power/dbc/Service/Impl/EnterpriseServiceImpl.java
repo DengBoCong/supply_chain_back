@@ -5,6 +5,7 @@ import com.power.dbc.Model.EnterpriseEntity;
 import com.power.dbc.Service.EnterpriseService;
 import com.power.dbc.Utils.SetNullUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("enterpriseService")
 @Transactional
 public class EnterpriseServiceImpl implements EnterpriseService {
+    @Qualifier("enterpriseDao")
     @Autowired
     private EnterpriseDao enterpriseDao;
 

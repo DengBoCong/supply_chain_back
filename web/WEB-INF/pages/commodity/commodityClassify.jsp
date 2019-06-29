@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" +
@@ -21,6 +22,7 @@
     <title>小陌速派 | 商品分类</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="../css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
     <link href="../css/animate.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -247,16 +249,16 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-lg-10">
-                <h2>Nestable list</h2>
+                <h2>商品分类</h2>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="<%=basePath%>/Index">首页</a>
                     </li>
                     <li>
-                        <a>Tables</a>
+                        <a>商品</a>
                     </li>
                     <li class="active">
-                        <strong>Nestable list</strong>
+                        <strong>商品分类</strong>
                     </li>
                 </ol>
             </div>
@@ -265,132 +267,96 @@
         </div>
         <div class="wrapper wrapper-content  animated fadeInRight">
             <div class="row">
-                <div class="col-md-4">
-                    <div id="nestable-menu">
-                        <button type="button" data-action="expand-all" class="btn btn-white btn-sm">Expand All</button>
-                        <button type="button" data-action="collapse-all" class="btn btn-white btn-sm">Collapse All</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Nestable basic list</h5>
+                            <h5>商品分类列表</h5>
+                            <button type="button" id="add" class="pull-right btn btn-info btn-xs mt-5"  data-toggle="modal" data-target="#myModal5"><i class="fa fa-plus"></i>   新增大类</button>
+                            <button style="display: none;" type="button" id="new" class="pull-right btn btn-info btn-xs mt-5"  data-toggle="modal" data-target="#myModal6"></button>
+                            <button style="display: none;" type="button" id="edit" class="pull-right btn btn-info btn-xs mt-5"  data-toggle="modal" data-target="#myModal7"></button>
                         </div>
                         <div class="ibox-content">
-                            <p class="m-b-lg">
-                                <strong>Nestable</strong> is an interactive hierarchical list. You can drag and drop to rearrange the order. It works well on touch-screens.
-                            </p>
-                            <div class="dd" id="nestable">
-                                <ol class="dd-list">
-                                    <li class="dd-item" data-id="1">
-                                        <div class="dd-handle">1 - Lorem ipsum</div>
-                                    </li>
-                                    <li class="dd-item" data-id="2">
-                                        <div class="dd-handle">2 - Dolor sit</div>
-                                        <ol class="dd-list">
-                                            <li class="dd-item" data-id="3">
-                                                <div class="dd-handle">3 - Adipiscing elit</div>
-                                            </li>
-                                            <li class="dd-item" data-id="4">
-                                                <div class="dd-handle">4 - Nonummy nibh</div>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li class="dd-item" data-id="5">
-                                        <div class="dd-handle">5 - Consectetuer</div>
-                                        <ol class="dd-list">
-                                            <li class="dd-item" data-id="6">
-                                                <div class="dd-handle">6 - Aliquam erat</div>
-                                            </li>
-                                            <li class="dd-item" data-id="7">
-                                                <div class="dd-handle">7 - Veniam quis</div>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li class="dd-item" data-id="8">
-                                        <div class="dd-handle">8 - Tation ullamcorper</div>
-                                    </li>
-                                    <li class="dd-item" data-id="9">
-                                        <div class="dd-handle">9 - Ea commodo</div>
-                                    </li>
-                                </ol>
-                            </div>
-                            <div class="m-t-md">
-                                <h5>Serialised Output</h5>
-                            </div>
-                            <textarea id="nestable-output" class="form-control"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ibox ">
-                        <div class="ibox-title">
-                            <h5>Nestable custom theme list</h5>
-                        </div>
-                        <div class="ibox-content">
-                            <p class="m-b-lg">
-                                Each list you can customize by standard css styles. Each element is responsive so you can add to it any other element to improve functionality of list.
-                            </p>
                             <div class="dd" id="nestable2">
                                 <ol class="dd-list">
-                                    <li class="dd-item" data-id="1">
-                                        <div class="dd-handle">
-                                            <span class="label label-info"><i class="fa fa-users"></i></span> Cras ornare tristique.
-                                        </div>
-                                        <ol class="dd-list">
-                                            <li class="dd-item" data-id="2">
-                                                <div class="dd-handle">
-                                                    <span class="pull-right"> 12:00 pm </span>
-                                                    <span class="label label-info"><i class="fa fa-cog"></i></span> Vivamus vestibulum nulla nec ante.
-                                                </div>
-                                            </li>
-                                            <li class="dd-item" data-id="3">
-                                                <div class="dd-handle">
-                                                    <span class="pull-right"> 11:00 pm </span>
-                                                    <span class="label label-info"><i class="fa fa-bolt"></i></span> Nunc dignissim risus id metus.
-                                                </div>
-                                            </li>
-                                            <li class="dd-item" data-id="4">
-                                                <div class="dd-handle">
-                                                    <span class="pull-right"> 11:00 pm </span>
-                                                    <span class="label label-info"><i class="fa fa-laptop"></i></span> Vestibulum commodo
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li class="dd-item" data-id="5">
-                                        <div class="dd-handle">
-                                            <span class="label label-warning"><i class="fa fa-users"></i></span> Integer vitae libero.
-                                        </div>
-                                        <ol class="dd-list">
-                                            <li class="dd-item" data-id="6">
-                                                <div class="dd-handle">
-                                                    <span class="pull-right"> 15:00 pm </span>
-                                                    <span class="label label-warning"><i class="fa fa-users"></i></span> Nam convallis pellentesque nisl.
-                                                </div>
-                                            </li>
-                                            <li class="dd-item" data-id="7">
-                                                <div class="dd-handle">
-                                                    <span class="pull-right"> 16:00 pm </span>
-                                                    <span class="label label-warning"><i class="fa fa-bomb"></i></span> Vivamus molestie gravida turpis
-                                                </div>
-                                            </li>
-                                            <li class="dd-item" data-id="8">
-                                                <div class="dd-handle">
-                                                    <span class="pull-right"> 21:00 pm </span>
-                                                    <span class="label label-warning"><i class="fa fa-child"></i></span> Ut aliquam sollicitudin leo.
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </li>
+                                    <c:forEach items="${CommodityClassFirst}" var="item">
+                                        <li class="dd-item" data-id="${item.number}">
+                                            <div class="dd-handle">
+                                                <span class="pull-right btn btn-danger btn-xs ml-5 js-delete" data-id="${item.number}"><i class="fa fa-prescription-bottle"></i>   删除</span><span class="pull-right btn btn-primary btn-xs ml-5 js-edit" data-id="${item.number}" data-name="${item.name}"><i class="fa fa-edit"></i>   编辑</span><span class="pull-right btn btn-primary btn-xs ml-5 js-add" data-id="${item.number}" data-name="${item.name}"><i class="fa fa-plus"></i>   增加子类</span>
+                                                <span class="label label-info"><i class="fa fa-folder"></i></span> ${item.name}
+                                            </div>
+                                            <ol class="dd-list">
+                                                <c:forEach items="${CommodityClassSecond}" var="Sitem">
+                                                    <c:if test="${Sitem.owner == item.number}">
+                                                        <li class="dd-item" data-id="${Sitem.number}">
+                                                            <div class="dd-handle">
+                                                                <span class="pull-right btn btn-danger btn-xs ml-5 js-delete" data-id="${Sitem.number}"><i class="fa fa-prescription-bottle"></i>   删除</span><span class="pull-right btn btn-primary btn-xs ml-5 js-edit" data-id="${Sitem.number}" data-name="${Sitem.name}"><i class="fa fa-edit"></i>   编辑</span>
+                                                                <span class="label label-info"><i class="fa fa-folder"></i></span> ${Sitem.name}
+                                                            </div>
+                                                        </li>
+                                                    </c:if>
+                                                </c:forEach>
+                                            </ol>
+                                        </li>
+                                    </c:forEach>
                                 </ol>
                             </div>
-                            <div class="m-t-md">
-                                <h5>Serialised Output</h5>
+                            <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">增加大类标签</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form role="form">
+                                                <div class="form-group"><input id="FirstLabel" type="text" placeholder="输入大类标签名称" class="form-control" value=""></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                            <button id="submitModify" type="button" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <textarea id="nestable2-output" class="form-control"></textarea>
+                            <div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" id="newSubLabel"></h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form role="form">
+                                                <div class="form-group"><input id="SecondLabel" type="text" placeholder="输入子类标签名称" class="form-control" value=""></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                            <button id="SecondAdd" type="button" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal fade" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 id="titleModify" class="modal-title">修改 </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form role="form">
+                                                <div class="form-group"><input id="editLabel" type="text" placeholder="输入标签名称" class="form-control" value=""></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                            <button id="modifySecond" type="button" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -416,43 +382,196 @@
 
 <script src="../js/inspinia.js"></script>
 <script src="../js/plugins/pace/pace.min.js"></script>
+<script src="../js/plugins/sweetalert/sweetalert.min.js"></script>
 <script>
     $(document).ready(function(){
         $('#logoImageF').attr('src', JSON.parse(sessionStorage.getItem("enterpriseInfo")).logoImage);
 
-        var updateOutput = function (e) {
-            var list = e.length ? e : $(e.target),
-                output = list.data('output');
-            if (window.JSON) {
-                output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
-            } else {
-                output.val('JSON browser support required for this demo.');
-            }
-        };
-        // activate Nestable for list 1
-        $('#nestable').nestable({
-            group: 1
-        }).on('change', updateOutput);
-
         // activate Nestable for list 2
         $('#nestable2').nestable({
-            group: 1
-        }).on('change', updateOutput);
-
-        // output initial serialised data
-        updateOutput($('#nestable').data('output', $('#nestable-output')));
-        updateOutput($('#nestable2').data('output', $('#nestable2-output')));
-
-        $('#nestable-menu').on('click', function (e) {
-            var target = $(e.target),
-                action = target.data('action');
-            if (action === 'expand-all') {
-                $('.dd').nestable('expandAll');
-            }
-            if (action === 'collapse-all') {
-                $('.dd').nestable('collapseAll');
-            }
+            group: 0,
+            maxDepth: 2,
+            onDragStart: function(l,e){return false;},
         });
+
+        var recordNumber = "";
+        var recordContent = "";
+        function clickEvent(){
+            $('#nestable2').on('click','.js-delete',function(){
+                var number =  $(this).attr('data-id');
+                swal({
+                    title: "确定删除?",
+                    text: "你将永久性删除该商品分类！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "继续删除",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false
+                }, function () {
+                    $.ajax({
+                        method: "POST",
+                        url: "/CommodityClassify/DeleteCommodityClass",
+                        dataType: "json",
+                        data: {"number" : number},
+                        success: function (data) {
+                            if(data.Cflag == "1"){
+                                swal({
+                                    title: "删除成功!",
+                                    text: "已经成功将该商品分类！",
+                                    type: "success",
+                                    confirmButtonText: "确定",
+                                },function(){window.location.reload();});
+                            }else{
+                                swal({
+                                    title: "删除失败!",
+                                    text: "请重新刷新进行重试!",
+                                    type: "error",
+                                    confirmButtonText: "确定",
+                                },function(){window.location.reload();});
+                            }
+                        },
+                        error: function(){
+                            swal({
+                                title: "出现错误!",
+                                text: "网络参数出现错误!",
+                                type: "error",
+                                confirmButtonText: "确定",
+                            },function(){window.location.reload();});
+                        }
+                    });
+                });
+            }).on('click','.js-edit',function(){
+                /*var id = $(this).attr('data-id');
+                location.href = '/edit?id='+id+'';*/
+                $("#titleModify").html("修改 " + $(this).attr('data-name'));
+                $("#editLabel").val($(this).attr('data-name'));
+                recordNumber = $(this).attr('data-id');
+                recordContent = $(this).attr('data-name');
+                $("#edit").click();
+            }).on('click', '.js-add', function(){
+               $("#newSubLabel").html($(this).attr('data-name'));
+                recordNumber = $(this).attr('data-id');
+                $("#new").click();
+            });
+        }
+
+        clickEvent();
+
+        $("#submitModify").click(function () {
+            $.ajax({
+                method: "POST",
+                url: "/CommodityClassify/addFirst",
+                dataType: "json",
+                data: {"label": $("#FirstLabel").val()},
+                beforeSend: function(){},
+                success: function(data){
+                    if(data.ADFlag == "1"){
+                        swal({
+                            title: "添加成功!",
+                            text: "已经成功添加该商品分类！",
+                            type: "success",
+                            confirmButtonText: "确定",
+                        },function(){window.location.reload();});
+                    }else{
+                        swal({
+                            title: "添加失败!",
+                            text: "已存在相同标签，请更改后进行重试!",
+                            type: "error",
+                            confirmButtonText: "确定",
+                        },function(){});
+                    }
+                },
+                error: function(){
+                    swal({
+                        title: "出现错误!",
+                        text: "网络参数出现错误!",
+                        type: "error",
+                        confirmButtonText: "确定",
+                    },function(){});
+                },
+            });
+        });
+
+        $("#SecondAdd").click(function () {
+            $.ajax({
+                method: "POST",
+                url: "/CommodityClassify/addSecond",
+                dataType: "json",
+                data: {"owner":recordNumber,"label": $("#SecondLabel").val()},
+                beforeSend: function(){},
+                success: function(data){
+                    if(data.ADFlag == "1"){
+                        swal({
+                            title: "添加成功!",
+                            text: "已经成功添加该商品分类！",
+                            type: "success",
+                            confirmButtonText: "确定",
+                        },function(){window.location.reload();});
+                    }else{
+                        swal({
+                            title: "添加失败!",
+                            text: "已存在相同标签，请更改后进行重试!",
+                            type: "error",
+                            confirmButtonText: "确定",
+                        },function(){});
+                    }
+                },
+                error: function(){
+                    swal({
+                        title: "出现错误!",
+                        text: "网络参数出现错误!",
+                        type: "error",
+                        confirmButtonText: "确定",
+                    },function(){});
+                },
+            });
+        });
+
+        $("#modifySecond").click(function () {
+            if(recordContent == $("#editLabel").val()){
+                swal({
+                    title: "提交失败!",
+                    text: "提交内容与原内容相同！",
+                    type: "warning",
+                    confirmButtonText: "确定",
+                },function(){});
+                return;
+            }
+            $.ajax({
+                method: "POST",
+                url: "/CommodityClassify/updateC",
+                dataType: "json",
+                data: {"number":recordNumber,"label": $("#editLabel").val()},
+                beforeSend: function(){},
+                success: function(data){
+                    if(data.flag == "1"){
+                        swal({
+                            title: "修改成功!",
+                            text: "已经成功修改该商品分类！",
+                            type: "success",
+                            confirmButtonText: "确定",
+                        },function(){window.location.reload();});
+                    }else{
+                        swal({
+                            title: "修改失败!",
+                            text: "已存在相同标签，请更改后进行重试!",
+                            type: "error",
+                            confirmButtonText: "确定",
+                        },function(){});
+                    }
+                },
+                error: function(){
+                    swal({
+                        title: "出现错误!",
+                        text: "网络参数出现错误!",
+                        type: "error",
+                        confirmButtonText: "确定",
+                    },function(){});
+                },
+            });
+        });
+
     });
 </script>
 </body>
